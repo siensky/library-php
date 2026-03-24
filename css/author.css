@@ -1,0 +1,71 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.author-description,
+.authors-books {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+h3 {
+  margin-top: 0;
+  color: #88889d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.author-description p {
+  font-style: italic;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li a {
+  display: block;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+li a:hover {
+  background-color: #f9f9fb;
+  color: #88889d;
+  padding-left: 20px;
+}

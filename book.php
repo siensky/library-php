@@ -13,15 +13,19 @@ if (!$book) {
 
 <!DOCTYPE html>
 <html>
-<head><title><?= htmlspecialchars($book['title']) ?></title></head>
+<head>
+    <title><?= htmlspecialchars($book['title']) ?></title>
+    <link rel="stylesheet" href="/css/book.css">
+</head>
 <body>
 
-    <h1><?= htmlspecialchars($book['title']) ?></h1>
-    
+    <h1 class="book-title" ><?= htmlspecialchars($book['title']) ?></h1>
+    <div class="book-description" >
     <h3>Description</h3>
     <p><?= htmlspecialchars($book['description']) ?></p>
-
+    </div>
     
+    <div class="loan-section" >
     <h3>Loan this book</h3>
     <form action="loan.php" method="POST">
         <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
@@ -30,5 +34,8 @@ if (!$book) {
         <input type="text" name="auth0_sub" required placeholder="Paste auth0 sub...">
         <button type="submit">Confirm Loan</button>
     </form>
+    </div>
+    
+  
 </body>
 </html>

@@ -17,16 +17,23 @@ if (!$author) {
 
 <!DOCTYPE html>
 <html>
-<head><title><?= htmlspecialchars($author['name']) ?></title></head>
+<head>
+    <title><?= htmlspecialchars($author['name']) ?></title>
+    <link rel="stylesheet" href="/css/author.css">
+</head>
 <body>
 
     <h1><?= htmlspecialchars($author['name']) ?></h1>
     
+    <div class="author-description">
     <h3>About the Author</h3>
     <p><?= htmlspecialchars($author['description'] ?? 'No bio available.') ?></p>
+    </div>
+
 
     
-    <h3>Books by this author:</h3>
+<div class="authors-books">
+<h3>Books by this author:</h3>
     <ul>
         <?php while ($b = pg_fetch_assoc($books_res)): ?>
             <li>
@@ -34,5 +41,6 @@ if (!$author) {
             </li>
         <?php endwhile; ?>
     </ul>
+</div>
 </body>
 </html>

@@ -17,12 +17,14 @@ if (!$authors){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-
-    <h1>Books</h1>
-    <ul>
+    <h1 id="library-title" >Library</h1>
+<div class="books-section" >
+<h1>Books</h1>
+    <ul class="book-list">
     <?php while ($book = pg_fetch_assoc($books)): ?>
 
 <li>
@@ -31,9 +33,11 @@ if (!$authors){
 
 <?php endwhile; ?>
     </ul>
+</div>
 
-    <h1>Authors</h1>
-    <ul>
+<div class="authors-section" >
+<h1>Authors</h1>
+    <ul class="author-list" >
     <?php while ($author = pg_fetch_assoc($authors)): ?>
 
 <li>
@@ -42,5 +46,7 @@ if (!$authors){
 
 <?php endwhile; ?>
     </ul>
+</div>
+
 </body>
 </html>
